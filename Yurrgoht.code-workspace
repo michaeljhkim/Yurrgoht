@@ -1,0 +1,911 @@
+{
+	"folders": [
+		{
+			"name": "Yurrgoht",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off",
+		"terminal.integrated.env.linux": {
+			"PATH": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+			"DOTNET_ROOT": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+			"DOTNET_HOST_PATH": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+			"DOTNET_MULTILEVEL_LOOKUP": "0",
+			"DOTNET_ROLL_FORWARD": "LatestMajor"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Yurrgoht Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"Linux",
+					"Debug",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"Linux",
+					"Debug",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Yurrgoht Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"Linux",
+					"Debug",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"Linux",
+					"DebugGame",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"Linux",
+					"DebugGame",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Yurrgoht Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"Linux",
+					"DebugGame",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"Linux",
+					"Development",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"Linux",
+					"Development",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Yurrgoht Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"Linux",
+					"Development",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht Linux Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"Linux",
+					"Test",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht Linux Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"Linux",
+					"Test",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Yurrgoht Linux Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht Linux Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"Linux",
+					"Test",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht Linux Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"Linux",
+					"Shipping",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht Linux Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"Linux",
+					"Shipping",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Yurrgoht Linux Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht Linux Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"Linux",
+					"Shipping",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht LinuxArm64 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"LinuxArm64",
+					"Debug",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht LinuxArm64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"LinuxArm64",
+					"Debug",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Yurrgoht LinuxArm64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht LinuxArm64 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"LinuxArm64",
+					"Debug",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht LinuxArm64 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht LinuxArm64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Yurrgoht LinuxArm64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht LinuxArm64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht LinuxArm64 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"LinuxArm64",
+					"Development",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht LinuxArm64 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"LinuxArm64",
+					"Development",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Yurrgoht LinuxArm64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht LinuxArm64 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"LinuxArm64",
+					"Development",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht LinuxArm64 Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"LinuxArm64",
+					"Test",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht LinuxArm64 Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"LinuxArm64",
+					"Test",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Yurrgoht LinuxArm64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht LinuxArm64 Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"LinuxArm64",
+					"Test",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht LinuxArm64 Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"LinuxArm64",
+					"Shipping",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht LinuxArm64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"LinuxArm64",
+					"Shipping",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Yurrgoht LinuxArm64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "Yurrgoht LinuxArm64 Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Yurrgoht",
+					"LinuxArm64",
+					"Shipping",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "YurrgohtEditor Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"YurrgohtEditor",
+					"Linux",
+					"Debug",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "YurrgohtEditor Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"YurrgohtEditor",
+					"Linux",
+					"Debug",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"YurrgohtEditor Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "YurrgohtEditor Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"YurrgohtEditor",
+					"Linux",
+					"Debug",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "YurrgohtEditor Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"YurrgohtEditor",
+					"Linux",
+					"DebugGame",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "YurrgohtEditor Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"YurrgohtEditor",
+					"Linux",
+					"DebugGame",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"YurrgohtEditor Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "YurrgohtEditor Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"YurrgohtEditor",
+					"Linux",
+					"DebugGame",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "YurrgohtEditor Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"YurrgohtEditor",
+					"Linux",
+					"Development",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "YurrgohtEditor Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"YurrgohtEditor",
+					"Linux",
+					"Development",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"YurrgohtEditor Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "YurrgohtEditor Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"YurrgohtEditor",
+					"Linux",
+					"Development",
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch Yurrgoht (Debug)",
+				"request": "launch",
+				"program": "/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Binaries/Linux/UnrealGame-Linux-Debug",
+				"preLaunchTask": "Yurrgoht Linux Debug Build",
+				"args": [
+				],
+				"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/Yurrgoht": "/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht",
+					"/UEVFS/Root": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"name": "Launch Yurrgoht (DebugGame)",
+				"request": "launch",
+				"program": "/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Binaries/Linux/UnrealGame-Linux-DebugGame",
+				"preLaunchTask": "Yurrgoht Linux DebugGame Build",
+				"args": [
+				],
+				"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/Yurrgoht": "/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht",
+					"/UEVFS/Root": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"name": "Launch Yurrgoht (Development)",
+				"request": "launch",
+				"program": "/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Binaries/Linux/UnrealGame",
+				"preLaunchTask": "Yurrgoht Linux Development Build",
+				"args": [
+				],
+				"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/Yurrgoht": "/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht",
+					"/UEVFS/Root": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"name": "Launch Yurrgoht (Test)",
+				"request": "launch",
+				"program": "/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Binaries/Linux/UnrealGame-Linux-Test",
+				"preLaunchTask": "Yurrgoht Linux Test Build",
+				"args": [
+				],
+				"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/Yurrgoht": "/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht",
+					"/UEVFS/Root": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"name": "Launch Yurrgoht (Shipping)",
+				"request": "launch",
+				"program": "/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Binaries/Linux/UnrealGame-Linux-Shipping",
+				"preLaunchTask": "Yurrgoht Linux Shipping Build",
+				"args": [
+				],
+				"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/Yurrgoht": "/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht",
+					"/UEVFS/Root": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"name": "Launch YurrgohtEditor (Debug)",
+				"request": "launch",
+				"program": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Binaries/Linux/UnrealEditor-Linux-Debug",
+				"preLaunchTask": "YurrgohtEditor Linux Debug Build",
+				"args": [
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject"
+				],
+				"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/Yurrgoht": "/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht",
+					"/UEVFS/Root": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"name": "Launch YurrgohtEditor (DebugGame)",
+				"request": "launch",
+				"program": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame",
+				"preLaunchTask": "YurrgohtEditor Linux DebugGame Build",
+				"args": [
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject"
+				],
+				"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/Yurrgoht": "/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht",
+					"/UEVFS/Root": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"name": "Launch YurrgohtEditor (Development)",
+				"request": "launch",
+				"program": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Binaries/Linux/UnrealEditor",
+				"preLaunchTask": "YurrgohtEditor Linux Development Build",
+				"args": [
+					"/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject"
+				],
+				"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/Yurrgoht": "/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht",
+					"/UEVFS/Root": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Linux Development Build",
+				"program": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/home/mk/distrobox-homes/ubuntu-toolbox/Unreal Projects/Yurrgoht/Yurrgoht.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"env": {
+					"PATH": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+					"DOTNET_ROOT": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+					"DOTNET_HOST_PATH": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+					"DOTNET_MULTILEVEL_LOOKUP": "0",
+					"DOTNET_ROLL_FORWARD": "LatestMajor"
+				},
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/home/mk/distrobox-homes/ubuntu-toolbox/Linux_Unreal_Engine_5.6.0"
+			}
+		]
+	}
+}
